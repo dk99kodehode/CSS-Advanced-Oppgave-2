@@ -5,7 +5,7 @@ html {
 /*---------Styling----------*/
 
 body {
-  background-color: rgb(202, 201, 201);
+  background-color: rgb(130, 130, 130);
   align-items: center;
   display: flex;
   justify-content: center;
@@ -46,7 +46,19 @@ h1:hover::after {
   border-radius: 12px;
 }
 
-ul {
+p:not(.not-blue) {
+  color: blue;
+}
+
+.target-child p:first-child {
+  color: rgb(255, 0, 0);
+}
+
+.target-child p:last-child {
+  color: rgb(230, 0, 255);
+}
+
+li {
   color: white;
   display: flex;
   width: 8rem;
@@ -54,26 +66,25 @@ ul {
   align-items: center;
 }
 
-ul:nth-child(odd) {
+li:nth-child(odd) {
   background-color: rgb(12, 0, 242);
   position: relative;
   border-radius: 12px;
 }
 
-ul::before {
+li::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 10px;
-  transform: translateY(-50%);
 }
 
-ul:nth-child(even) {
+li:nth-child(even) {
   background-color: rgb(255, 1, 1);
   border-radius: 12px;
 }
 
-ul::after {
+li::after {
   content: "⭐";
 }
 
