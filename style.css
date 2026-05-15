@@ -1,0 +1,126 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/*---------Styling----------*/
+
+body {
+  background-color: rgb(202, 201, 201);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  background-color: rgb(221, 217, 217);
+  border-radius: 12px;
+  border: 2px solid rgb(163, 155, 155);
+  flex-direction: column;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+/*---------LÆR PSUEDO ELEMENTER---------*/
+h1 {
+  margin: 0 20px;
+  color: black;
+  padding: 10px;
+  position: relative;
+  text-decoration: none;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 0%;
+  height: 4px;
+  background: rgb(0, 0, 0);
+  transition: width 0.4s ease;
+}
+
+h1:hover::after {
+  width: 95%;
+  border-radius: 12px;
+}
+
+ul {
+  color: white;
+  display: flex;
+  width: 8rem;
+  height: 2rem;
+  align-items: center;
+}
+
+ul:nth-child(odd) {
+  background-color: rgb(12, 0, 242);
+  position: relative;
+  border-radius: 12px;
+}
+
+ul::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+ul:nth-child(even) {
+  background-color: rgb(255, 1, 1);
+  border-radius: 12px;
+}
+
+ul::after {
+  content: "⭐";
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input[type="text"] {
+  border-radius: 12px;
+  width: 16rem;
+}
+
+input[type="text"]:focus {
+  border: 4px solid rgb(255, 6, 6);
+  outline: none;
+}
+
+input[type="submit"] {
+  height: 3rem;
+  border-radius: 6px;
+  outline: none;
+}
+
+input[type="submit"]:focus {
+  border: 4px solid rgb(255, 6, 6);
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  scale: 1.02;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  height: 4rem;
+  border-radius: 12px;
+}
+
+textarea:focus {
+  border: 4px solid rgb(255, 6, 6);
+  outline: none;
+}
+
+form:focus {
+  border: 2px solid red;
+}
