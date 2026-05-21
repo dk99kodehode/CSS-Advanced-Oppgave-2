@@ -73,13 +73,6 @@ li:nth-child(odd) {
   border-radius: 12px;
 }
 
-li::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 10px;
-}
-
 li:nth-child(even) {
   background-color: rgb(255, 1, 1);
   border-radius: 12px;
@@ -136,4 +129,22 @@ textarea:focus {
 
 form:focus {
   border: 2px solid red;
+}
+
+.underline {
+  display: flex;
+  font-size: 24px;
+  color: rgb(4, 94, 94);
+  position: relative;
+}
+
+.underline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  width: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(255, 0, 187);
+  height: 4px;
 }
